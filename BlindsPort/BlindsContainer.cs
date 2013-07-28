@@ -13,8 +13,14 @@ namespace BlindsPort {
 	/// </summary>
 	public class BlindsContainer : ViewGroup {
 
-		private Color BackgroundColor = Color.Rgb (250, 50, 50);
-		private Color ForegroundColor = Color.Rgb (50, 75, 75);
+		private static Color BackgroundColor {
+			get { return Color.Rgb (250, 50, 50); }
+		}
+
+		private Color ForegroundColor { 
+			get { return Color.Rgb (50, 75, 75); }
+		}
+
 		private Paint ForegroundPaint;
 
 		public BlindsContainer (Context context, IAttributeSet attrs,
