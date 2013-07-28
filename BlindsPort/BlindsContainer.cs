@@ -3,6 +3,7 @@ using Android.Views;
 using Android.Content;
 using Android.Util;
 using Android.Graphics;
+using Android.Graphics.Drawables;
 
 namespace BlindsPort {
 	/// <summary>
@@ -22,6 +23,9 @@ namespace BlindsPort {
 		}
 
 		private Paint ForegroundPaint;
+		private Bitmap OriginalBitmap;
+		private Canvas OriginalCanvas;
+		private BitmapDrawable BackgroundDrawable;
 
 		public BlindsContainer (Context context, IAttributeSet attrs,
 		                       int defStyle) : base(context, attrs, defStyle) {
@@ -49,8 +53,34 @@ namespace BlindsPort {
 		protected override void DispatchDraw (Canvas canvas) {
 			base.DispatchDraw (canvas);
 
-			canvas.DrawColor (BackgroundColor);
-			canvas.DrawCircle (Width / 2, Height / 2, Width / 3, ForegroundPaint);
+			OriginalBitmap = Bitmap.CreateBitmap (Width, Height, Bitmap.Config.Argb8888);
+			OriginalCanvas = new Canvas (OriginalBitmap);
+			if (BackgroundDrawable != null) {
+				BackgroundDrawable.Draw (canvas);
+			}
+		}
+
+		public override void SetBackgroundDrawable (Drawable drawable) {
+			base.SetBackgroundDrawable (drawable);
+			BackgroundDrawable = (BitmapDrawable) drawable;
+			CenterBackground ();
+		}
+
+		public override void SetBackgroundResource (int resID) {
+			base.SetBackgroundResource (resID);
+			BackgroundDrawable = (BitmapDrawable) Resources.GetDrawable (resID);
+			CenterBackground ();
+		}
+
+		private void CenterBackground() {
+			if (BackgroundDrawable != null) {
+				DisplayMetrics Metrics = Resources.DisplayMetrics;
+				BackgroundDrawable.SetTargetDensity (Metrics);
+				BackgroundDrawable.Gravity = GravityFlags.Center;
+				BackgroundDrawable.SetBounds (0, 0, Metrics.WidthPixels, Metrics.HeightPixels);
+			}
+
+			Invalidate ();
 		}
 	}
 }

@@ -17,6 +17,9 @@ namespace BlindsPort
 			base.OnCreate (bundle);
 
 			SetContentView (Resource.Layout.Main);
+
+			BlindsContainer blindsContainer = FindViewById<BlindsContainer> (Resource.Id.blindsContainer);
+			blindsContainer.SetBackgroundResource (Resource.Drawable.dandelion);
 		}
 	}
 }

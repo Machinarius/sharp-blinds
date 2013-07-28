@@ -1,19 +1,28 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="BlindsPort\BlindsContainer.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="BlindsPort\MainActivity.cs">
     <Files>
-      <File FileName="BlindsPort\MainActivity.cs" Line="21" Column="3" />
-      <File FileName="BlindsPort\BlindsContainer.cs" Line="21" Column="74" />
+      <File FileName="BlindsPort\MainActivity.cs" Line="14" Column="3" />
+      <File FileName="BlindsPort\BlindsContainer.cs" Line="83" Column="18" />
+      <File FileName="BlindsPort\Properties\AndroidManifest.xml" Line="5" Column="12" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True">
-          <Node name="BlindsPort" expanded="True" selected="True">
+          <Node name="BlindsPort" expanded="True">
+            <Node name="Assets" expanded="True" />
+            <Node name="Properties" expanded="True" />
             <Node name="Resources" expanded="True">
+              <Node name="drawable" expanded="True" />
+              <Node name="drawable-large" expanded="True" />
               <Node name="layout" expanded="True" />
             </Node>
+            <Node name="MainActivity.cs" selected="True" />
           </Node>
         </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
