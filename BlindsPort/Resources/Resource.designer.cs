@@ -63,8 +63,23 @@ namespace BlindsPort
 		public partial class Id
 		{
 			
+			// aapt resource value: 0x7f050002
+			public const int MediumTextBox = 2131034114;
+			
+			// aapt resource value: 0x7f050003
+			public const int SmallTextBox = 2131034115;
+			
 			// aapt resource value: 0x7f050000
 			public const int blindsContainer = 2131034112;
+			
+			// aapt resource value: 0x7f050004
+			public const int dummybutton1 = 2131034116;
+			
+			// aapt resource value: 0x7f050005
+			public const int dummybutton2 = 2131034117;
+			
+			// aapt resource value: 0x7f050001
+			public const int largeTextBox = 2131034113;
 			
 			static Id()
 			{
@@ -95,11 +110,23 @@ namespace BlindsPort
 		public partial class String
 		{
 			
-			// aapt resource value: 0x7f040001
-			public const int app_name = 2130968577;
+			// aapt resource value: 0x7f040005
+			public const int app_name = 2130968581;
+			
+			// aapt resource value: 0x7f040003
+			public const int dummy_button_one = 2130968579;
+			
+			// aapt resource value: 0x7f040004
+			public const int dummy_button_two = 2130968580;
 			
 			// aapt resource value: 0x7f040000
-			public const int hello = 2130968576;
+			public const int dummy_text_large = 2130968576;
+			
+			// aapt resource value: 0x7f040001
+			public const int dummy_text_medium = 2130968577;
+			
+			// aapt resource value: 0x7f040002
+			public const int dummy_text_small = 2130968578;
 			
 			static String()
 			{
