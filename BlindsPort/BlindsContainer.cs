@@ -59,13 +59,13 @@ namespace BlindsPort {
 		}
 
 		protected override void DispatchDraw (Canvas canvas) {
-			base.DispatchDraw (canvas);
-
 			OriginalBitmap = Bitmap.CreateBitmap (Width, Height, Bitmap.Config.Argb8888);
 			OriginalCanvas = new Canvas (OriginalBitmap);
 			if (BackgroundDrawable != null) {
 				BackgroundDrawable.Draw (canvas);
 			}
+
+			base.DispatchDraw (canvas);
 		}
 
 		public override void SetBackgroundDrawable (Drawable drawable) {
